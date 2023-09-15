@@ -1,0 +1,81 @@
+/* @import url('https://Fonts.googleapis.com/css2?family=Inter:wght@500&display=swap'); */
+:root {
+
+  --font-color: #f9fbe7;
+  --bg-color:  #424242;;
+}
+
+
+@font-face {
+font-family: 'GeneralSans';
+src: url("./assets/Fonts/OTF/GeneralSans-Regular.otf");
+
+;
+
+}
+@font-face {
+font-family: 'GeneralSans-bold';
+src: url("./assets/Fonts/OTF/GeneralSans-Medium.otf");
+}
+@font-face {
+  font-family: 'GeneralSans-ExtraLight';
+  src: url("./assets/Fonts/OTF/GeneralSans-Extralight.otf");
+  }
+/* 
+@font-face {
+font-family: 'GeneralSans-b';
+src: url("./assets/Fonts/GeneralSans-Bold.otf");
+}
+
+@font-face {
+font-family: 'GeneralSans-regular';
+  src: url("./assets/Fonts/GeneralSans-Regular.otf");
+} */
+
+*{
+font-family: 'GeneralSans', roboto;
+}
+
+.Link,a {
+color: #61dafb;
+}
+.container{
+width:90%  !important;
+}
+
+
+.p-16{padding:16px;}
+.pl-16{padding-left:16px;}
+.pl-25{padding-left:25px;}
+.pl-50{padding-left:50px;}
+.pl-100{padding-left:100px;}
+.pl-120{padding-left:120px;}
+.pb-25{padding-bottom:25px;}
+.pb-50{padding-bottom:50px;}
+.pb-100{padding-bottom:100px;}
+.pb-120{padding-bottom:120px;}
+.pt-25{padding-top:25px;}
+.pt-50{padding-top:50px;}
+.pt-100{padding-top:100px;}
+.pt-120{padding-top:120px;}
+.mt-25{margin-top:25px;}
+.mt-50{margin-top:50px;}
+.mt-100{margin-top:100px;}
+.mt-120{margin-top:120px;}
+.mb-25{margin-bottom:25px;}
+.mb-50{margin-bottom:50px;}
+.mb-100{margin-bottom:100px;}
+.mb-120{margin-bottom:120px;}
+
+
+p{
+font-family: 'GeneralSans', roboto;
+font-style: normal;
+font-weight: 300 !important;
+font-size: 32px;
+line-height: 43px;
+color: #4A4A4A;
+}
+
+/* custom */
+
