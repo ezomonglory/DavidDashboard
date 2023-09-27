@@ -7,7 +7,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <div className='max-w-[1400px] mx-auto border border-gray-200'>
     <App />
+    </div>
   </React.StrictMode>
 );
 
