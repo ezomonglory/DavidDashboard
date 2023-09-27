@@ -19,23 +19,24 @@ export const Button = styled(Link)`
   }
   @media screen and (max-width: 400px) {
     font-size: 1.4rem;
+  }
 `;
 
-export const InputField = styled.input
-.attrs(() => ({
-  className: '',
-}))`
-height:70px;
-border:1px solid #ffffff !important;
-color:#ffffff !important;
-padding: 10px 30px !important;
-border-radius: 0px 0px 0px 15px !important;
-//small-mobile
-flex:2;
-@media screen and (max-width: 425px) {
-}
+// export const InputField = styled.input
+// .attrs(() => ({
+//   className: '',
+// }))`
+// height:70px;
+// border:1px solid #ffffff !important;
+// color:#ffffff !important;
+// padding: 10px 30px !important;
+// border-radius: 0px 0px 0px 15px !important;
+// //small-mobile
+// flex:2;
+// @media screen and (max-width: 425px) {
+// }
 
-`;
+// `;
 
 export const SidebarListItem = styled.div
 .attrs(() => ({

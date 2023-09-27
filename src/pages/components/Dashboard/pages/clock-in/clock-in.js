@@ -6,26 +6,31 @@ import {
     Container,
     SidebarListItem,
     Sidebar
- } from '../../dahsboard.style';
+} from '../../dahsboard.style';
 import SidebarWidget from '../../../../widget/SidebarWidget/SidebarWidget';
 import ClockInpagewidget from './clock-inpagewidget';
 
 function ClockInPage() {
-  return (
-    <div>
-        <NavWidget/>
-        <div className='row'>
-            <div className='col s12 m2  cyan darken-4'>
-                <SidebarWidget/>
-            </div>
-            <div className='col s12 m9'>
-                {/* <div className='container'> */}
-                   <ClockInpagewidget/>
-                {/* </div> */}
+    return (
+        <div className=' '>
+            <div className='flex flex-col md:flex-row space-y-[40px] md:space-y-0 pt-[32px] md:pt-0'>
+
+
+                <NavWidget />
+                <div className='hidden md:block'>
+                    <SidebarWidget />
+                </div>
+
+
+                <div className=' w-full overflow-hidden'>
+                    <ClockInpagewidget />
+                </div>
+
             </div>
         </div>
-    </div>
-  );
+
+
+    );
 }
 
 export default ClockInPage;

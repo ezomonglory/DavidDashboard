@@ -1,8 +1,38 @@
+
+
+@font-face {
+    font-family: 'helveticaneuemedium';
+    src: url('./assets/Fonts/helveticaneue_medium-webfont.woff2') format('woff2'),
+         url('./assets/Fonts/helveticaneue_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'helveticaneuelight';
+    src: url('./assets/Fonts/helveticaneuelt-webfont.woff2') format('woff2'),
+         url('./assets/Fonts/helveticaneuelt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.textreg{
+    font-family: 'helveticaneuelight';
+}
+
+.textmed{
+    font-family: 'helveticaneuemedium';
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:helveticaneuelight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +41,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+table{
+    background-color: white;    
+    width: 100%;    
+    border-color: black;
+    border-collapse: collapse;
+    border-radius: 5px;
+    position: relative;
+}
+
+thead{
+    background-color: #efefef;
+    position: sticky;    
+    top: 0px;
+    padding: 8px;
+    padding-left: 34px;
+    border-bottom: 1px solid #E7E7ED;    
+    border-top: 1px solid #E7E7ED;  
+    color: #8a8a8a;  
+}
+
+tr{
+    border: 1px solid #E7E7ED;  
+}
+
+tr,td,th,thead, tbody{
+    padding: 8px;
+    padding-left: 34px;
+    border-bottom: 1px solid #E7E7ED;    
+}
+
+
+.scroll-hidden::-webkit-scrollbar{
+    display: none;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

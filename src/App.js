@@ -24,7 +24,7 @@ function App() {
     <AuthProvider>
       <Router>
         <Switch>
-          <Route exact path="/" component={dashboard} />
+          <Route exact path="/" component={AdminWidget} />
           {/* <Route path="/subscribe" component={SubscribeComponent} /> */}
           <Route path="/dashboard" component={dashboard} />
           <Route path="/registerUser" component={RegisterUser} />
