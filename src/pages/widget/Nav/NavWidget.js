@@ -11,7 +11,7 @@ function NavWidget() {
         <div className='block md:hidden px-[16px]  '>
 
             <div className={` fixed h-screen w-full z-50 top-0 animation  ${open ? "right-[0%] " : "right-[100%]"}`}>
-                <SidebarWidget setOpenModal={setOpen} />
+                <SidebarWidget setOpen={setOpen} />
             </div>
 
             <div className='flex justify-between items-center w-full'>

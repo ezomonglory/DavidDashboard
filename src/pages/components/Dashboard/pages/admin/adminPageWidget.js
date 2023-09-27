@@ -149,7 +149,7 @@ function AdminPageWidget() {
     }, [])
 
     return (
-        <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[48px] overflow-hidden'>
+        <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[24px]  md:space-y-[48px] overflow-hidden'>
             <div className=' flex justify-between items-center  '>
                 <h2 className=' text-[#1A1A1A] text-[24px] leading-[32px] font-[500] textmed text-[#1A1A1A]'>Students</h2>
 
@@ -165,12 +165,12 @@ function AdminPageWidget() {
                 {loading &&
                     <div className="">
                         <div className="col s12 left">
-                            <CircleProgressLoader />
+                            Loading...
                         </div>
                     </div>
                 }
 
-                <table className='  w-[780px] md:w-full  md:px-[20px]  '>
+                <table className='  w-[680px] md:w-full  md:px-[20px]  '>
                     <thead className=' w-full md:px-[20px]  '>
                         <tr>
                             {/* <th className='text-[14px] text-[#8a8a8a]  md:text-[16px]'> <input type="radio" className='w-[30px] h-[30px] ' /> </th> */}

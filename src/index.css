@@ -78,6 +78,9 @@ tr,td,th,thead, tbody{
     display: none;
 }
 
+.animation{
+    transition: all .2s ease-in;
+}
 
 @tailwind base;
 @tailwind components;

@@ -41,7 +41,7 @@ function ClockInpagewidget() {
     return (
         <div>
 
-            <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[48px] overflow-hidden'>
+            <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[24px] md:space-y-[48px] overflow-hidden'>
                 <div>
                     <h2 className='text-[#000] text-[24px] font-[500] leading-[32px] textmed text-[#1A1A1A] ' >Clock-in history</h2>
                 </div>
@@ -51,12 +51,12 @@ function ClockInpagewidget() {
                 {loading &&
                     <div className="row">
                         <div className="col s12 left">
-                            <CircleProgressLoader />
+                            Loading...
                         </div>
                     </div>
                 }
                 <div className='overflow-scroll scroll-hidden'>
-                    <table className='  w-[780px] md:w-full  md:px-[20px]  '>
+                    <table className='  w-[600px] md:w-full  md:px-[20px]  '>
                         <thead className=' w-full md:px-[20px]  '>
                             <tr>
                                 <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' >Full Name</th>
