@@ -191,7 +191,7 @@ function AdminPageWidget() {
                                     <td className="text-[14px] md:text-[16px]">{data.data()['createdAt']}</td>
                                     <td>
                                         {!loading &&
-                                            <button className='  text-[#036] ' onClick={() => deleteCourse(data.id)}>
+                                            <button className='  textmed text-[#036] ' onClick={() => deleteCourse(data.id)}>
                                                 Delete
                                             </button>
                                         }

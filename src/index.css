@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'helveticaneuemedium';
-    src: url('./assets/Fonts/helveticaneue_medium-webfont.woff2') format('woff2'),
-         url('./assets/Fonts/helveticaneue_medium-webfont.woff') format('woff');
+    src: url('./assets/Fonts/neuemontreal-medium-webfont.woff2') format('woff2'),
+         url('./assets/Fonts/neuemontreal-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -14,8 +14,8 @@
 
 @font-face {
     font-family: 'helveticaneuelight';
-    src: url('./assets/Fonts/helveticaneuelt-webfont.woff2') format('woff2'),
-         url('./assets/Fonts/helveticaneuelt-webfont.woff') format('woff');
+    src: url('./assets/Fonts/neuemontreal-regular-webfont.woff2') format('woff2'),
+         url('./assets/Fonts/neuemontreal-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
