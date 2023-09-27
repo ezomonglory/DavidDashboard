@@ -41,7 +41,7 @@ function ClockInpagewidget() {
     return (
         <div>
 
-            <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[42px] overflow-hidden'>
+            <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[48px] overflow-hidden'>
                 <div>
                     <h2 className='text-[#000] text-[24px] font-[500] leading-[32px] textmed text-[#1A1A1A] ' >Clock-in history</h2>
                 </div>

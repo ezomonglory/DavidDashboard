@@ -149,7 +149,7 @@ function AdminPageWidget() {
     }, [])
 
     return (
-        <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[32px] overflow-hidden'>
+        <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[48px] overflow-hidden'>
             <div className=' flex justify-between items-center  '>
                 <h2 className=' text-[#1A1A1A] text-[24px] leading-[32px] font-[500] textmed text-[#1A1A1A]'>Students</h2>
 
