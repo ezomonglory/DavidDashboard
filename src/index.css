@@ -81,6 +81,10 @@ tr,td,th,thead, tbody{
     transition: all .2s ease-in;
 }
 
+.shadow{
+    box-shadow: 4px 0px 20px 0px rgba(0,0,0,0.05);
+}
+
 
 select{
     background-color: transparent;

@@ -18,7 +18,7 @@ function SidebarWidget({setOpen}) {
 
     return (
         <div>
-            <div className='bg-white py-[54px] h-screen flex flex-col space-y-[54px] min-w-[242px] px-[24px] border-[0.5px] border-[e6e6e6] ' >
+            <div className='bg-white py-[54px] h-screen flex flex-col space-y-[54px] min-w-[242px] px-[24px] border-[0.5px] border-[e6e6e6] shadow ' >
 
                 <div className='flex items-center justify-between'>
                     <div className='flex gap-[8px] items-center  '>

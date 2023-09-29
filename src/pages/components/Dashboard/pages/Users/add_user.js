@@ -199,41 +199,55 @@ function AddUser() {
                 </div> */}
 
                 <div className='flex flex-col md:flex-row items-center justify-between w-full gap-[16px] md:gap-[40px] ' >
-                    <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={school} required>
-                        <option value="" disabled selected>Faculty</option>
-                        {schooltArr &&
-                            schooltArr.map((data) => <option value={data}>{data}</option>)
-                        }
-                    </select>
+                    <div className=" flex flex-col space-y-[8px]">
+                        <label className='text-[14px] font-[400]' >Faculty</label>
+                        <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={school} required>
 
-                    <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={department} required>
-                        <option value="" disabled selected>Department</option>
-                        {departmentArr &&
-                            departmentArr.map((data) => <option value={data}>{data}</option>)
-                        }
-                    </select>
+                            <option value=""  className='text-[#b3b3b3] ' disabled selected>Select Faculty</option>
+                            {schooltArr &&
+                                schooltArr.map((data) => <option value={data}>{data}</option>)
+                            }
+                        </select>
+                    </div>
+
+                    <div className=" flex flex-col space-y-[8px]">
+                        <label className='text-[14px] font-[400]' >Department</label>
+                        <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={department} required>
+                            <option value="" className='text-[#b3b3b3] ' disabled selected>Select Department</option>
+                            {departmentArr &&
+                                departmentArr.map((data) => <option value={data}>{data}</option>)
+                            }
+                        </select>
+                    </div>
 
                 </div>
 
 
                 <div className='flex flex-col md:flex-row w-full items-center justify-between gap-[16px] md:gap-[40px] ' >
-                    <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={program} required>
-                        <option value="" disabled selected>Program</option>
-                        {programmArr &&
-                            programmArr.map((data) => <option value={data}>{data}</option>)
-                        }
-                    </select>
+                    <div className=" flex flex-col space-y-[8px]">
+                    <label className='text-[14px] font-[400]' >Program</label>
 
-                    <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={level} required>
-                        <option value="" disabled selected>Level</option>
-                        {levelArr &&
-                            levelArr.map((data) => <option value={data}>{data}</option>)
-                        }
-                    </select>
+                        <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={program} required>
+                            <option value="" className='text-[#b3b3b3] ' disabled selected>Select Program</option>
+                            {programmArr &&
+                                programmArr.map((data) => <option value={data}>{data}</option>)
+                            }
+                        </select>
+                    </div>
+
+                    <div className=" flex flex-col space-y-[8px]">
+                    <label className='text-[14px] font-[400]' >Select Level</label>
+                        <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={level} required>
+                            <option value="" className='text-[#b3b3b3] ' disabled selected>Level</option>
+                            {levelArr &&
+                                levelArr.map((data) => <option value={data}>{data}</option>)
+                            }
+                        </select>
+                    </div>
                 </div>
 
                 {/* <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={semester} required>
-                    <option value="" disabled selected>Semester</option>
+                    <option value="" className='text-[#b3b3b3] ' disabled selected>Semester</option>
                     {semestertArr &&
                         semestertArr.map((data) => <option value={data}>{data}</option>)
                     }
@@ -280,7 +294,7 @@ function AddUser() {
                             Loading
                         </button>
                         :
-                        <button type='submit' disabled={loading} className='textmed bg-[#036] py-[12px] px-[16px] w-full md:w-[185px] text-white font-[500] text-center items-center rounded-[4px] text-black textmed  ' >
+                        <button type='submit' disabled={loading} className='textmed bg-[#036] py-[12px] px-[16px] w-full md:w-[185px] text-white font-[500] text-center items-center rounded-[4px] textmed  ' >
                             Register User
                         </button>
                     }
