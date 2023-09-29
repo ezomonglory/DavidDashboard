@@ -177,11 +177,11 @@ function AddUser() {
                 </div>
 
 
-                <div className=" flex flex-col space-y-[8px]">
+                <div className=" w-full flex flex-col space-y-[8px]">
                     <label className='text-[14px] font-[400]' >NFC Card No</label>
                     <input className='  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="text" ref={nfcNumner} required placeholder='Enter NFC card No' />
                 </div>
-                <div className=" flex flex-col space-y-[8px]">
+                <div className=" w-full flex flex-col space-y-[8px]">
                     <label className='text-[14px] font-[400]' >Full Name</label>
                     <input className='  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="text" ref={name} required placeholder='Full name' />
                 </div>
@@ -199,18 +199,18 @@ function AddUser() {
                 </div> */}
 
                 <div className='flex flex-col md:flex-row items-center justify-between w-full gap-[16px] md:gap-[40px] ' >
-                    <div className=" flex flex-col space-y-[8px]">
+                    <div className=" w-full flex flex-col space-y-[8px]">
                         <label className='text-[14px] font-[400]' >Faculty</label>
                         <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={school} required>
 
-                            <option value=""  className='text-[#b3b3b3] ' disabled selected>Select Faculty</option>
+                            <option value="" className='text-[#b3b3b3] ' disabled selected>Select Faculty</option>
                             {schooltArr &&
                                 schooltArr.map((data) => <option value={data}>{data}</option>)
                             }
                         </select>
                     </div>
 
-                    <div className=" flex flex-col space-y-[8px]">
+                    <div className=" w-full flex flex-col space-y-[8px]">
                         <label className='text-[14px] font-[400]' >Department</label>
                         <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={department} required>
                             <option value="" className='text-[#b3b3b3] ' disabled selected>Select Department</option>
@@ -224,8 +224,8 @@ function AddUser() {
 
 
                 <div className='flex flex-col md:flex-row w-full items-center justify-between gap-[16px] md:gap-[40px] ' >
-                    <div className=" flex flex-col space-y-[8px]">
-                    <label className='text-[14px] font-[400]' >Program</label>
+                    <div className=" w-full flex flex-col space-y-[8px]">
+                        <label className='text-[14px] font-[400]' >Program</label>
 
                         <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={program} required>
                             <option value="" className='text-[#b3b3b3] ' disabled selected>Select Program</option>
@@ -235,8 +235,8 @@ function AddUser() {
                         </select>
                     </div>
 
-                    <div className=" flex flex-col space-y-[8px]">
-                    <label className='text-[14px] font-[400]' >Select Level</label>
+                    <div className=" w-full flex flex-col space-y-[8px]">
+                        <label className='text-[14px] font-[400]' >Select Level</label>
                         <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={level} required>
                             <option value="" className='text-[#b3b3b3] ' disabled selected>Level</option>
                             {levelArr &&
@@ -255,14 +255,14 @@ function AddUser() {
 
 
                 {/* <div className='row'>
-                    <div className=" flex flex-col space-y-[8px]  file-field input-field col s12">
-                        <div className=" flex flex-col space-y-[8px]  btn">
+                    <div className=" w-full flex flex-col space-y-[8px]  file-field input-field col s12">
+                        <div className=" w-full flex flex-col space-y-[8px]  btn">
                             <span>Pick User Profile Pic </span>
                             <input className='  p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="file"
                                 onChange={handleProfilePic}
                                 required />
                         </div>
-                        <div className=" flex flex-col space-y-[8px]  file-path-wrapper">
+                        <div className=" w-full flex flex-col space-y-[8px]  file-path-wrapper">
                             <input className='  p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' class="file-path validate" type="text" />
                         </div>
                     </div>
