@@ -150,7 +150,7 @@ function AddUser() {
             <form onSubmit={handleSubmit} className=' flex-col flex space-y-[16px] md:space-y-[32px] max-w-[568px] ' >
 
                 <div>
-                    <input className=' rounded-[5px] p-[16px]  border border-[#B3B3B3] rounded-[8px] outline-none text-[#B3B3B3] hidden' type="file"
+                    <input className='  p-[16px]  border border-[#B3B3B3] rounded-[8px] outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  hidden' type="file"
                         ref={inputRef}
                         onChange={handleProfilePic}
                         accept="image/*"
@@ -174,41 +174,39 @@ function AddUser() {
                         inputRef.current.click()
                     }} >{profilePic ? "Change Picture" : "Upload Picture"}</h1>
 
-
                 </div>
-
 
 
                 <div className=" flex flex-col space-y-[8px]">
                     <label className='text-[14px] font-[400]' >NFC Card No</label>
-                    <input className=' rounded-[5px] p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[#B3B3B3] ' type="text" ref={nfcNumner} required placeholder='Enter NFC card No' />
+                    <input className='  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="text" ref={nfcNumner} required placeholder='Enter NFC card No' />
                 </div>
                 <div className=" flex flex-col space-y-[8px]">
                     <label className='text-[14px] font-[400]' >Full Name</label>
-                    <input className=' rounded-[5px] p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[#B3B3B3] ' type="text" ref={name} required placeholder='Full name' />
+                    <input className='  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="text" ref={name} required placeholder='Full name' />
                 </div>
                 <div className=" flex flex-col space-y-[8px]">
                     <label className='text-[14px] font-[400]'>Matriculation Number</label>
-                    <input className=' rounded-[5px] p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[#B3B3B3] ' type="text" ref={matricNumber} required placeholder='Enter Matric Number' />
+                    <input className='  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="text" ref={matricNumber} required placeholder='Enter Matric Number' />
                 </div>
                 {/* <div className=" flex flex-col space-y-[8px]  ">
                     <label className='text-[14px] font-[400]  ' >Email</label>
-                    <input className=' rounded-[5px] p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[#B3B3B3] ' type="email" ref={email} required />
+                    <input className='  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="email" ref={email} required />
                 </div>
                 <div className=" flex flex-col space-y-[8px]  ">
                     <label className='text-[14px] font-[400]  ' >Phone</label>
-                    <input className=' rounded-[5px] p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[#B3B3B3] ' type="tel" ref={phone} required />
+                    <input className='  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="tel" ref={phone} required />
                 </div> */}
 
                 <div className='flex flex-col md:flex-row items-center justify-between w-full gap-[16px] md:gap-[40px] ' >
-                    <select className='w-full rounded-[5px] p-[16px] border borrder-[#B3B3B3] rounded-[8px] outline-none text-[#b3b3b3] ' ref={school} required>
+                    <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={school} required>
                         <option value="" disabled selected>Faculty</option>
                         {schooltArr &&
                             schooltArr.map((data) => <option value={data}>{data}</option>)
                         }
                     </select>
 
-                    <select className='w-full rounded-[5px] p-[16px] border borrder-[#B3B3B3] rounded-[8px] outline-none text-[#b3b3b3] ' ref={department} required>
+                    <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={department} required>
                         <option value="" disabled selected>Department</option>
                         {departmentArr &&
                             departmentArr.map((data) => <option value={data}>{data}</option>)
@@ -219,14 +217,14 @@ function AddUser() {
 
 
                 <div className='flex flex-col md:flex-row w-full items-center justify-between gap-[16px] md:gap-[40px] ' >
-                    <select className='w-full rounded-[5px] p-[16px] border borrder-[#B3B3B3] rounded-[8px] outline-none text-[#b3b3b3] ' ref={program} required>
+                    <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={program} required>
                         <option value="" disabled selected>Program</option>
                         {programmArr &&
                             programmArr.map((data) => <option value={data}>{data}</option>)
                         }
                     </select>
 
-                    <select className='w-full rounded-[5px] p-[16px] border borrder-[#B3B3B3] rounded-[8px] outline-none text-[#b3b3b3] ' ref={level} required>
+                    <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={level} required>
                         <option value="" disabled selected>Level</option>
                         {levelArr &&
                             levelArr.map((data) => <option value={data}>{data}</option>)
@@ -234,7 +232,7 @@ function AddUser() {
                     </select>
                 </div>
 
-                {/* <select className='w-full rounded-[5px] p-[16px] border borrder-[#B3B3B3] rounded-[8px] outline-none text-[#b3b3b3] ' ref={semester} required>
+                {/* <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={semester} required>
                     <option value="" disabled selected>Semester</option>
                     {semestertArr &&
                         semestertArr.map((data) => <option value={data}>{data}</option>)
@@ -246,12 +244,12 @@ function AddUser() {
                     <div className=" flex flex-col space-y-[8px]  file-field input-field col s12">
                         <div className=" flex flex-col space-y-[8px]  btn">
                             <span>Pick User Profile Pic </span>
-                            <input className=' rounded-[5px] p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[#B3B3B3] ' type="file"
+                            <input className='  p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' type="file"
                                 onChange={handleProfilePic}
                                 required />
                         </div>
                         <div className=" flex flex-col space-y-[8px]  file-path-wrapper">
-                            <input className=' rounded-[5px] p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[#B3B3B3] ' class="file-path validate" type="text" />
+                            <input className='  p-[16px] border border-[#B3B3B3] rounded-[8px] outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' class="file-path validate" type="text" />
                         </div>
                     </div>
                     <div className='col s12'>
@@ -282,7 +280,7 @@ function AddUser() {
                             Loading
                         </button>
                         :
-                        <button type='submit' disabled={loading} className='textmed bg-[#036] py-[12px] px-[16px] w-full md:w-[185px] text-white font-[500] text-center items-center rounded-[4px]  ' >
+                        <button type='submit' disabled={loading} className='textmed bg-[#036] py-[12px] px-[16px] w-full md:w-[185px] text-white font-[500] text-center items-center rounded-[4px] text-black textmed  ' >
                             Register User
                         </button>
                     }

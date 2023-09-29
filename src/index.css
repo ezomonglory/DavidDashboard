@@ -18,7 +18,6 @@
          url('./assets/Fonts/neuemontreal-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -80,6 +79,17 @@ tr,td,th,thead, tbody{
 
 .animation{
     transition: all .2s ease-in;
+}
+
+
+select{
+    background-color: transparent;
+     border-radius:4px;
+     padding: 16px;
+     color: black;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
 }
 
 @tailwind base;

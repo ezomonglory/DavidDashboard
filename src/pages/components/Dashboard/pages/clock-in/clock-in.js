@@ -22,7 +22,7 @@ function ClockInPage() {
                 </div>
 
 
-                <div className=' w-full overflow-hidden'>
+                <div className=' w-full overflow-scroll scroll-hidden pb-[40px] h-screen'>
                     <ClockInpagewidget />
                 </div>
 

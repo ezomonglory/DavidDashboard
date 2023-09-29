@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { firestore } from '../../../../../firebase'
 import CircleProgressLoader from '../../../../widget/circle_progress_loader'
+import { FadeLoader } from 'react-spinners'
 import { Link } from 'react-router-dom';
 
 function AdminPageWidget() {
@@ -151,7 +152,7 @@ function AdminPageWidget() {
     return (
         <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[24px]  md:space-y-[48px] overflow-hidden'>
             <div className=' flex justify-between items-center  '>
-                <h2 className=' text-[#1A1A1A] text-[24px] leading-[32px] font-[500] textmed text-[#1A1A1A]'>Students</h2>
+                <h2 className=' text-[24px] leading-[32px] font-[500] textmed text-[#1A1A1A]'>Students</h2>
 
                 <Link to="/registerUser" >
                     <div className='bg-[#036] rounded-[4px] text-white py-[8px] px-[16px] textmed  ' >Add Student</div>
@@ -162,47 +163,48 @@ function AdminPageWidget() {
             <hr className='h-[1px] md:hidden bg-[#d9d9d9] w-[500px]  ml-[-16px] ' />
 
             <div className='overflow-scroll scroll-hidden'>
-                {loading &&
-                    <div className="">
-                        <div className="col s12 left">
-                            Loading...
+
+
+                {
+                    loading ?
+                        <div className='h-[60vh] pt-[-50%] flex items-center justify-center  w-full'>
+                            < FadeLoader color="#183DA7" />
                         </div>
-                    </div>
-                }
 
-                <table className='  w-[680px] md:w-full  md:px-[20px]  '>
-                    <thead className=' w-full md:px-[20px]  '>
-                        <tr>
-                            {/* <th className='text-[14px] text-[#8a8a8a]  md:text-[16px]'> <input type="radio" className='w-[30px] h-[30px] ' /> </th> */}
-                            <th className='text-[14px] text-[#8a8a8a] text-left  textmed ' >Name</th>
-                            <th className='text-[14px] text-[#8a8a8a] text-left  textmed '>Matric Number</th>
-                            <th className='text-[14px] text-[#8a8a8a] text-left  textmed '>Created At</th>
-                            <th className='text-[14px] text-[#8a8a8a] text-left textmed'></th>
-                        </tr>
-                    </thead>
-
-                    <tbody   >
-                        {!loading &&
-
-                            rows.map((data) =>
-                                <tr className='' >
-                                    <td className="text-[14px] md:text-[16px]"> {data.data()['name']}</td>
-                                    <td className="text-[14px] md:text-[16px]">{data.data()['matricNumber']}</td>
-                                    <td className="text-[14px] md:text-[16px]">{data.data()['createdAt']}</td>
-                                    <td>
-                                        {!loading &&
-                                            <button className='  textmed text-[#036] ' onClick={() => deleteCourse(data.id)}>
-                                                Delete
-                                            </button>
-                                        }
-                                    </td>
+                        : <table className='  w-[680px] md:w-full  md:px-[20px]  '>
+                            <thead className=' w-full md:px-[20px]  '>
+                                <tr>
+                                    {/* <th className='text-[14px] text-[#8a8a8a]  md:text-[16px]'> <input type="radio" className='w-[30px] h-[30px] ' /> </th> */}
+                                    <th className='text-[14px] text-[#8a8a8a] text-left  textmed ' >Name</th>
+                                    <th className='text-[14px] text-[#8a8a8a] text-left  textmed '>Matric Number</th>
+                                    <th className='text-[14px] text-[#8a8a8a] text-left  textmed '>Created At</th>
+                                    <th className='text-[14px] text-[#8a8a8a] text-left textmed'></th>
                                 </tr>
-                            )
-                        }
+                            </thead>
+
+                            <tbody   >
 
 
-                    </tbody>
-                </table>
+                                {rows.map((data) =>
+                                    <tr className='' >
+                                        <td className="text-[14px] md:text-[16px]"> {data.data()['name']}</td>
+                                        <td className="text-[14px] md:text-[16px]">{data.data()['matricNumber']}</td>
+                                        <td className="text-[14px] md:text-[16px]">{data.data()['createdAt']}</td>
+                                        <td>
+                                            {!loading &&
+                                                <button className='  textmed text-[#036] ' onClick={() => deleteCourse(data.id)}>
+                                                    Delete
+                                                </button>
+                                            }
+                                        </td>
+                                    </tr>
+                                )}
+
+
+
+                            </tbody>
+                        </table>
+                }
                 {isEmti &&
                     <div className="row">
                         <div className="col s12 center">
@@ -211,7 +213,7 @@ function AdminPageWidget() {
                     </div>
                 }
             </div>
-        </div>
+        </div >
     )
 }
 

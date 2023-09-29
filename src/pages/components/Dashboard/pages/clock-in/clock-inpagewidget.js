@@ -3,6 +3,7 @@ import CircleProgressLoader from '../../../../widget/circle_progress_loader';
 import firebase from 'firebase/app'
 import { storage, firestore, } from '../../../../../firebase'
 import { useHistory } from 'react-router-dom'
+import { FadeLoader } from 'react-spinners';
 
 
 function ClockInpagewidget() {
@@ -24,12 +25,12 @@ function ClockInpagewidget() {
         tt.get().then((item) => {
             setLoading(true)
             const items = item.docs.map((doc) => doc)
-            
+
             if (items.length == 0) {
                 setIsEmpti(true)
             }
             setRows(items)
-            console.log("CLock in history==", "---=-====-==---")            
+            console.log("CLock in history==", "---=-====-==---")
 
             setTimeout(() => {
                 setLoading(false)
@@ -43,56 +44,60 @@ function ClockInpagewidget() {
 
             <div className=' md:py-[48px] px-[16px] md:px-[40px] w-full flex flex-col space-y-[24px] md:space-y-[48px] overflow-hidden'>
                 <div>
-                    <h2 className='text-[#000] text-[24px] font-[500] leading-[32px] textmed text-[#1A1A1A] ' >Clock-in history</h2>
+                    <h2 className=' text-[24px] font-[500] leading-[32px] textmed text-[#1A1A1A] ' >Clock-in history</h2>
                 </div>
 
                 <hr className='h-[1px] md:hidden bg-[#d9d9d9] w-[500px]  ml-[-16px] ' />
 
-                {loading &&
-                    <div className="row">
-                        <div className="col s12 left">
-                            Loading...
-                        </div>
-                    </div>
-                }
-                <div className='overflow-scroll scroll-hidden'>
-                    <table className='  w-[600px] md:w-full  md:px-[20px]  '>
-                        <thead className=' w-full md:px-[20px]  '>
-                            <tr>
-                                <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' >Full Name</th>
-                                <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' >Course</th>
-                                <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' >Created At</th>
-                                <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' ></th>
-                            </tr>
-                        </thead>
 
-                        <tbody>
-                            {!loading &&
+                <div className='overflow-scroll scroll-hidden '>
+                    {
+                        loading ?
+                            <div className='h-[60vh] pt-[-50%] flex items-center justify-center  w-full'>
+                                < FadeLoader color="#183DA7" />
+                            </div>
 
-                                rows.map((data) => {
-                                    console.log(data.data())
+                            :
+                            <table className='  w-[600px] md:w-full  md:px-[20px]  '>
+                                <thead className=' w-full md:px-[20px]  '>
+                                    <tr>
+                                        <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' >Full Name</th>
+                                        <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' >Course</th>
+                                        <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' >Created At</th>
+                                        <th className='text-[14px] text-[#8a8a8a] text-left md:text-[16px] textmed' ></th>
+                                    </tr>
+                                </thead>
 
-                                    return (
-                                        <tr>
-                                            <td className="text-[14px] md:text-[16px]">
-                                                {/* {data.data()['studentCard']} */}
+                                <tbody>
+                                    {!loading &&
 
-                                                <GetUserDetails data={{
-                                                    "studentCard": data.data()['studentCard'],
-                                                }} />
-                                            </td>
-                                            <td className="text-[14px] md:text-[16px]"> {"CSC421"}</td>
-                                            <td className="text-[14px] md:text-[16px]"> {"12/08/23"}</td>
-                                            <td className="text-[14px] md:text-[16px]"> </td>
-                                        </tr>
-                                    )
-                                }
-                                )
-                            }
+                                        rows.map((data) => {
+                                            console.log(data.data())
+
+                                            return (
+                                                <tr>
+                                                    <td className="text-[14px] md:text-[16px]">
+                                                        {/* {data.data()['studentCard']} */}
+
+                                                        <GetUserDetails data={{
+                                                            "studentCard": data.data()['studentCard'],
+                                                        }} />
+                                                    </td>
+                                                    <td className="text-[14px] md:text-[16px]"> {"CSC421"}</td>
+                                                    <td className="text-[14px] md:text-[16px]"> {"12/08/23"}</td>
+                                                    <td className="text-[14px] md:text-[16px]"> </td>
+                                                </tr>
+                                            )
+                                        }
+                                        )
+                                    }
 
 
-                        </tbody>
-                    </table>
+                                </tbody>
+                            </table>
+
+                    }
+
                 </div>
 
 
