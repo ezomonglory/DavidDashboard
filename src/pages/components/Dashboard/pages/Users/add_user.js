@@ -236,7 +236,7 @@ function AddUser() {
                     </div>
 
                     <div className=" w-full flex flex-col space-y-[8px]">
-                        <label className='text-[14px] font-[400]' >Select Level</label>
+                        <label className='text-[14px] font-[400]  ' >Select Level</label>
                         <select className='w-full  p-[16px] border border-[#B3B3B3] rounded-[4px] text-black textmed outline-none text-[14px] leading-[22px] md:text-[16px] md:leading-[24px]  ' ref={level} required>
                             <option value="" className='text-[#b3b3b3] ' disabled selected>Level</option>
                             {levelArr &&
@@ -288,7 +288,7 @@ function AddUser() {
 
                 </div> */}
 
-                <div className=' w-full flex  md:justify-start items-center justify-center '>
+                <div className=' w-full flex  md:justify-start items-center justify-center mt-[24px] md:mt-[0] '>
                     {loading ?
                         <button type='submit' disabled className='btn disabled textmed ' >
                             Loading
