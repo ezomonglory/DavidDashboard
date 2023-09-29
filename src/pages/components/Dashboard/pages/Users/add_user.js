@@ -288,13 +288,13 @@ function AddUser() {
 
                 </div> */}
 
-                <div className=' w-full flex  md:justify-start items-center justify-center mt-[24px] md:mt-[0] '>
+                <div className=' w-full flex  md:justify-start items-center justify-center md:mt-[0] '>
                     {loading ?
                         <button type='submit' disabled className='btn disabled textmed ' >
                             Loading
                         </button>
                         :
-                        <button type='submit' disabled={loading} className='textmed bg-[#036] py-[12px] px-[16px] w-full md:w-[185px] text-white font-[500] text-center items-center rounded-[4px] textmed  ' >
+                        <button type='submit' disabled={loading} className='textmed  mt-[32px] bg-[#036] py-[12px] px-[16px] w-full md:w-[185px] text-white font-[500] text-center items-center rounded-[4px] textmed  ' >
                             Register User
                         </button>
                     }
